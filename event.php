@@ -1,9 +1,14 @@
 <?php
-function dope_PushEvents($flavor, $image, $serverID)
+function dope_PushEvents($flavor, $image, $serverID, $location)
 {
     $event = array(
       "username" => "DOPE-BOT",
       "embeds" => array([
+          // OVH DC AS AUTHOR XD.
+          "author" => array(
+               "name": "$location",
+               "icon_url": "https://dopehosting.net/images/discord/$location.png"
+          ),
           "title" => "**CREATED!**",
           "description" => "*NEW CLOUD SRV CREATED!*",
           "fields" => array(
@@ -39,5 +44,5 @@ function dope_PushEvents($flavor, $image, $serverID)
 }
 
 
-dope_PushEvents("$flavor", "$image", "$serverID");
+dope_PushEvents("$flavor", "$image", "$serverID", "$location");
 ?>
