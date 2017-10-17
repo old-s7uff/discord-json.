@@ -39,5 +39,5 @@ function dope_PushEvents($flavor, $image, $serverID)
 }
 
 
-dope_PushEvents($flavor, $image, $serverID);
+dope_PushEvents("$flavor", "$image", "$serverID");
 ?>
